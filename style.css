@@ -1,0 +1,121 @@
+.borda {
+	border: 1px solid red;
+}
+
+#bg{
+	background-color: #1E2129;
+}
+
+.Container{
+	height: 100%;
+	color: white;
+}
+
+
+/*Navbar*/
+
+.nome{
+	display: flex;
+	font: Arial;
+	color: #0081D1;
+	font-size: 1.5rem;
+	align-content: center;
+	width: 100%;
+	align-items:center;
+	text-decoration: none;
+}
+
+
+ .link{
+	display:flex;
+	font: Arial;
+	font-size: 1rem;
+	color: whitesmoke;
+	justify-content: center;	
+	flex-direction: row;
+	width: 100%;
+}
+
+.links{
+	display: flex;
+	justify-content: space-evenly;
+	width:75%;
+	a:link { 
+	color: #000; text-decoration: none;
+ } /* Não visitado */
+a:visited { 
+	color: white;
+ } /* Visitado */
+a:hover { 
+	color: #009DFF;
+ } /* Passar o mouse */
+a:active { 
+	color: white;
+ } /* Clicado */
+}
+
+
+
+#menu{
+	display: flex;
+	justify-content: flex-end;
+	align-self: center;
+	width:100%;
+}
+
+/*hero*/
+
+section{
+	height:100%;
+}
+
+.titulo{
+	display:flex;
+	justify-content: center;
+	margin-top: 20px;
+}
+
+.saudacao{
+	font:Arial;
+	text-align: center;
+}
+.saudacao2{
+	display:block;
+	text-align: center;
+}
+
+.publi{
+	display:grid;
+	grid-template-columns: 2fr 2fr 2fr;
+	gap:20px;
+}
+
+.titulopubli{
+	color: #0081D1;
+	font-size: 1.5rem;
+}
+
+.publitxt{
+	font-size: 1.25rem;
+}
+
+#fimpubli{
+	display:flex;
+	padding-top:10px;
+	justify-content:center;
+}
+
+#btn{
+	display: flex;
+	width: 100%;
+	justify-content: center;
+
+}
+
+#btnregister{
+	width: 25%;
+	color: black;
+	font-size: 1.2rem;
+	background-color: #569490;
+	border-radius: 10px;
+}
