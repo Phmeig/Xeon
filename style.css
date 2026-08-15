@@ -41,7 +41,7 @@
 	justify-content: space-evenly;
 	width:75%;
 	a:link { 
-	color: #000; text-decoration: none;
+	color: lightgrey; text-decoration: none;
  } /* Não visitado */
 a:visited { 
 	color: white;
