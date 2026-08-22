@@ -237,7 +237,26 @@ section{
 .progresso{
 	height: 100%;
 	width: 22%;
-	background: linear-gradient(to right, #061536, #0692BD) ;
+	background: linear-gradient(to right, #061536, #0692BD);
 	grid-column: 1 / -5;
 	grid-row: 4;
+}
+
+#tarefa{
+	display: flex;
+	flex-direction: row;
+}
+
+#btnsucesso{
+	background: #2EFF89;
+	border:none;
+	border-radius:10px;
+	height:1.8rem;
+}
+
+#btnfracasso{
+	background: #F5272E;
+	border:none;
+	border-radius:10px;
+	height:1.8rem;
 }
