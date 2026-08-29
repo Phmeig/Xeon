@@ -260,3 +260,19 @@ section{
 	border-radius:10px;
 	height:1.8rem;
 }
+
+/*Dashboard*/
+.cardashboard{
+	display: grid;
+	grid-template-columns: repeat(2, 100%);
+	grid-template-rows: repeat(3, 5fr);
+}
+
+#titdash{
+	display: flex;
+	justify-content:center;
+	align-content: center;
+	flex-directio:row;
+	margin-top: 2%;
+	color: #C002D1;
+}
