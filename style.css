@@ -247,14 +247,54 @@ section{
 	flex-direction: row;
 }
 
-#btnsucesso{
+.tarefasGrid{
+	display: grid;
+	grid-template-columns: repeat(4,auto);
+	grid-template-rows: repeat(3, auto);
+	grid-template-areas:
+	"tituloP tituloP prompt prompt"
+	"tarefas tarefas prompt prompt"
+	"campo campo prompt prompt";
+}
+
+.tarefas {
+	grid-area: tarefas;
+	width: 100%;
+}
+
+.item-tarefa {
+	display: flex;
+	align-items: center;
+	gap: 10px;
+	margin-bottom: 10px;
+}
+
+.campoMsg{
+	grid-area:campo;
+}
+
+
+#prompt{
+	width: 100%;
+	grid-area:prompt;
+	display: flex;
+	flex-direction: column;
+	align-items: flex-end;
+	margin-left: 100%;
+}
+
+.tituloP{
+	grid-area: tituloP;
+}
+
+.btnsucesso{
 	background: #2EFF89;
 	border:none;
 	border-radius:10px;
 	height:1.8rem;
 }
 
-#btnfracasso{
+.btnfracasso{
 	background: #F5272E;
 	border:none;
 	border-radius:10px;

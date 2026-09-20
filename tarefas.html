@@ -28,18 +28,21 @@
 		</nav> <!--FIM NAV-->
 		<!--Hero -->
 		<section>
-		<div>
 			<article id="cardp"  class="bordacard"> <!--card -->
-				<div>
-						<h2 id="centro" class="borda">Lista de Afazeres</h2>
-						<div id="tarefa">
-							<button id="btnfracasso">Fracasso</button>
-							<h4>Tarefa 1</h4>
-							<button id="btnsucesso">Concluida</button>
-						</div>
-				</div>
-			</article>	
-		</div>		
+				<div class="tarefasGrid">
+					<h2 id="centro" class="tituloP">Lista de Afazeres</h2>
+					<div class="tarefas">
+							<!-- <h4 id="texto"> Tarefa 1</h4>
+							<button onclick="fracasso()"id="btnfracasso">Fracasso</button>
+							 <button onclick="sucesso()" id="btnsucesso">Concluida</button> -->
+					</div>
+					<p class="campoMsg"></p>
+					<div id="prompt">
+						<h3>Adicione sua tarefa</h3>
+						<input class="nova" type="text" placeholder="Digite sua tarefa..."> <button onclick="adicionar()">Adicionar</button>
+					</div>
+				</div>	
+			</article>		
 			</div>
 		</section>  	<!--Fim Hero -->
 	</div>
