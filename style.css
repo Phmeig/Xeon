@@ -396,13 +396,81 @@ section{
 
 .linkprof{
 	margin-left: 2%;
-	a:link { 
+}
+
+.linkprof a:link { 
 	text-decoration: none;
 	color: #1BCC94;
  }
- 	a:visited{
+
+.linkprof a:visited{
  	color:#5A9684;
  }	
-	a:hover{
-	 	color:#20E6CF;	
+ 	
+.linkprof a:hover{
+ 	color:#20E6CF;	
  }
+
+ /*Livros*/
+.cardpLivros{
+	margin:13px auto 0 auto;
+	display: grid;
+	justify-content: space-between;
+	align-items: center;
+	max-width: 1000px;
+	background-color:#272727 ;
+	padding: 10px 0 0 10px;
+	width: 100%;
+	grid-template-columns: repeat(2, 1fr);
+	grid-template-rows: auto;
+	grid-template-areas: 
+	"nomeLivro livrodeagora";
+}
+
+.addlivro{
+	grid-area: nomeLivro;
+	display: flex;
+	flex-direction: column;
+	align-items: flex-start;
+	width: 100%;
+	border: 1px solid red;
+	align-self: flex-start;
+}
+
+
+
+.capaLivro{
+	grid-area: livrodeagora;
+}
+
+.labelLivro{
+	font-size: 1.75rem;
+	cursor: pointer;
+}
+
+.promptLivro{
+	text-decoration: none;
+	display: none;
+}
+
+.labelLivro{
+	margin-top: 2%;
+}
+
+.capaEscolhida{
+	border: 1px solid whitesmoke ;
+	border-radius: 10%;
+	max-height: 982px;
+	display: flex;
+	justify-content: center;
+}
+
+.nombre{
+	margin-top: 5%;
+}
+ 
+.nomeLivro{
+	border: 1px solid #1F596E;
+	border-radius: 10px;
+	background-color: #D2D5D6;
+}

@@ -7,7 +7,6 @@ function adicionar() {
 	let textoDigitado = inputNova.value.trim();
 	let containerTarefas = document.querySelector('.tarefas');
 
-	// Evita adicionar tarefas em branco
 	if (textoDigitado !== "") {
 		containerTarefas.innerHTML += `
 			<div class="item-tarefa">
@@ -37,3 +36,9 @@ function fracasso(botao) {
 	campoMsg.innerText = `Você descartou sua tarefa: ${txt}!`;
 	divTarefa.remove();
 }
+
+// Leitura
+function livros() {
+	location.replace('livros.html')
+}
+
