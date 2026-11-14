@@ -522,3 +522,7 @@ section{
 	border: none;
 	text-align: center;
 }
+
+#msgfalha, #msgfalha2 {
+	color: rgb(199, 24, 24);
+}
