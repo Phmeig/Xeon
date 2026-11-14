@@ -103,6 +103,7 @@ section{
 
 #btnregister{
 	width: 25%;
+	border:none;
 	color: #b6d9d9;
 	font-size: 1.2rem;
 	background-color:#0C5C59;
@@ -251,15 +252,12 @@ section{
 	grid-template-columns: repeat(2,auto);
 	grid-template-rows: repeat(3, auto);
 	grid-template-areas:
-	"tituloP tituloP prompt prompt"
-	"tarefas tarefas prompt prompt"
-	"campo campo prompt prompt";
+	"tituloP tituloP "
+	"prompt prompt"
+	"campo campo ";
 }
 
-.tarefas {
-	grid-area: tarefas;
-	width: 100%;
-}
+
 
 .item-tarefa {
 	display: flex;
@@ -274,17 +272,24 @@ section{
 
 
 #prompt{
-	width: 75%;
+	width:100%;
 	grid-area:prompt;
-	display: flex;
-	flex-direction: column;
-	align-items: flex-end;
-	margin-left: 100%;
+	flex-direction: row;
+	justify-content: flex-start;
+	color: white;
 }
 
 .tituloP{
 	grid-area: tituloP;
 }
+
+#btntarefas{
+	border: none;
+	background-color: #85218e;
+	border-radius: 10px;
+	color: white;
+}
+
 
 .btnsucesso{
 	background: #2EFF89;
@@ -423,7 +428,8 @@ section{
 	grid-template-columns: repeat(2, 1fr);
 	grid-template-rows: auto;
 	grid-template-areas: 
-	"nomeLivro livrodeagora";
+	"nomeLivro livrodeagora"
+	"nomelivro btnleitura";
 }
 
 .addlivro{
@@ -472,6 +478,21 @@ section{
 	border-radius: 10px;
 	background-color: #D2D5D6;
 }
+
+#divbtnleitura{
+	width:100%;
+	grid-area:btnleitura;
+	display:flex;
+	justify-content: center;
+}
+
+#btnleitura{
+	border:none;
+	border-radius: 10px;
+	background-color:#098167;
+	width: 50%;
+	
+}
 /*Registro: */
 
 #tituloregistro{
@@ -505,6 +526,7 @@ section{
 	background-color: #4535a2;	
 	width: 75%;
 	text-align: center;
+	color:white;
 }
 
 .inputregistro::placeholder{
