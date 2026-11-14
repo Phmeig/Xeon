@@ -107,10 +107,11 @@ section{
 
 #btnregister{
 	width: 25%;
-	color: black;
+	color: #b6d9d9;
 	font-size: 1.2rem;
-	background-color: #569490;
+	background-color:#0C5C59;
 	border-radius: 10px;
+	border: none;
 }
 
 
@@ -252,12 +253,13 @@ section{
 
 .tarefasGrid{
 	display: grid;
-	grid-template-columns: repeat(4,auto);
-	grid-template-rows: repeat(3, auto);
+	grid-template-columns: repeat(2,50%);
+	grid-template-rows: repeat(4, auto);
 	grid-template-areas:
-	"tituloP tituloP prompt prompt"
-	"tarefas tarefas prompt prompt"
-	"campo campo prompt prompt";
+	"tituloP tituloP "
+	"prompt prompt "
+	"tarefas tarefas"
+	"campo campo ";
 }
 
 .tarefas {
@@ -276,18 +278,26 @@ section{
 	grid-area:campo;
 }
 
+#btntarefas{
+	background-color: #5c0b9e;
+	border: none;
+	border-radius: 10px;
+	color:rgb(234, 230, 230);
+}
+
 
 #prompt{
-	width: 100%;
-	grid-area:prompt;
-	display: flex;
-	flex-direction: column;
-	align-items: flex-end;
-	margin-left: 100%;
+	margin-top: 5%;
+	margin-bottom: 5%;
+	grid-area: prompt;
+	font-family: "Times New Roman";
 }
 
 .tituloP{
 	grid-area: tituloP;
+	font-family: Roboto;
+	display: flex;
+	justify-content: center;
 }
 
 .btnsucesso{
@@ -425,9 +435,11 @@ section{
 	padding: 10px 0 0 10px;
 	width: 100%;
 	grid-template-columns: repeat(2, 1fr);
-	grid-template-rows: auto;
+	grid-template-rows: repeat(3, 33%);
 	grid-template-areas: 
-	"nomeLivro livrodeagora";
+	"nomeLivro livrodeagora"
+	"nomelivro btnleitura"
+	"nomelivro btnleitura";
 }
 
 .addlivro{
@@ -436,7 +448,6 @@ section{
 	flex-direction: column;
 	align-items: flex-start;
 	width: 100%;
-	border: 1px solid red;
 	align-self: flex-start;
 }
 
@@ -461,11 +472,26 @@ section{
 }
 
 .capaEscolhida{
-	border: 1px solid whitesmoke ;
 	border-radius: 10%;
 	max-height: 982px;
 	display: flex;
 	justify-content: center;
+}
+
+#divbtnleitura{
+	justify-content: center;
+	display:flex;
+	grid-area: btnleitura;
+	align-items: center;
+}
+
+#btnleitura{
+	border:none;
+	background-color: #05b8ff;
+	border-radius: 10px;
+	width:100%;
+	height:100%;
+	color: rgb(1, 54, 50);
 }
 
 .nombre{
@@ -473,9 +499,13 @@ section{
 }
  
 .nomeLivro{
-	border: 1px solid #1F596E;
+	border: none;
 	border-radius: 10px;
-	background-color: #D2D5D6;
+	color:whitesmoke;
+	background-color: #19024a;
+}
+.nomeLivro::placeholder{
+	color: rgb(221, 220, 220);
 }
 /*Registro: */
 
@@ -510,6 +540,7 @@ section{
 	background-color: #4535a2;	
 	width: 75%;
 	text-align: center;
+	color: white;
 }
 
 .inputregistro::placeholder{
