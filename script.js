@@ -42,3 +42,23 @@ function livros() {
 	location.replace('livros.html')
 }
 
+// Login
+function efetuar(){
+	let user = document.querySelector('#user').value;
+	let senha1 = document.querySelector('#senha').value;
+	let senha2 = document.querySelector('#senha2').value;
+	let msg = document.querySelector('#msgfalha');
+	let msgS = document.querySelector('#msgfalha2');
+	if (user == '' || senha1 == "" || senha2 == ""){
+		msg.innerText = "Por favor, preencha todos os campos!"
+	}
+	else if(senha1.length < 5 || senha2.length < 5){
+		msgS.innerText = `Sua senha precisa ter pelo menos 5 caracteres!`
+	}
+	else if (senha1 != senha2){
+		msgS.innerText = "Suas senhas são diferentes."
+	}
+	else{
+		location.replace("leitura.html");
+	}
+}
