@@ -248,7 +248,7 @@ section{
 
 .tarefasGrid{
 	display: grid;
-	grid-template-columns: repeat(4,auto);
+	grid-template-columns: repeat(2,auto);
 	grid-template-rows: repeat(3, auto);
 	grid-template-areas:
 	"tituloP tituloP prompt prompt"
@@ -274,7 +274,7 @@ section{
 
 
 #prompt{
-	width: 100%;
+	width: 75%;
 	grid-area:prompt;
 	display: flex;
 	flex-direction: column;
