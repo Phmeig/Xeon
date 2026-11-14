@@ -433,7 +433,6 @@ section{
 	flex-direction: column;
 	align-items: flex-start;
 	width: 100%;
-	border: 1px solid red;
 	align-self: flex-start;
 }
 
