@@ -494,7 +494,6 @@ section{
 	border: 4px solid #7e8adb;
 	border-radius: 10px;
 	width:75%;
-	/* align-content: center; */
 	height: fit-content;
 }
 
@@ -526,4 +525,5 @@ section{
 	color: #b6d9d9;
 	background-color: #0C5C59;
 	border: none;
+	text-align: center;
 }
