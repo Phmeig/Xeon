@@ -13,8 +13,7 @@ function adicionar() {
 				<h4 class="texto">${textoDigitado}</h4>
 				<button onclick="fracasso(this)" class="btnfracasso">Descartar</button>
 				<button onclick="sucesso(this)" class="btnsucesso">Concluída</button>
-			</div>
-		`;
+			</div>`;
 		inputNova.value = "";
 	}
 }
@@ -60,5 +59,14 @@ function efetuar(){
 	}
 	else{
 		location.replace("leitura.html");
+	}
+}
+
+//Livros
+function capa(){
+	const capa = document.querySelector("#promptLivro");
+	const divcapa = document.querySelector(".capaLivro");
+	if  (capa.files.length == 0){
+		console.log( "Insira a foto da capa do livro, por favor")
 	}
 }
