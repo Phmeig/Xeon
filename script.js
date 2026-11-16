@@ -68,5 +68,14 @@ function capa(){
 	const divcapa = document.querySelector(".capaLivro");
 	if  (capa.files.length == 0){
 		console.log( "Insira a foto da capa do livro, por favor")
+		return
+	} 
+	const arquivo = capa.files[0];
+	const leitor = new FileReader()
+
+	leitor.onload = function (e) {
+		const imagem = e.target.result;
+		divcapa.innerHTML = `<img src="${imagem}" alt="Livro Atual" class="capaEscolhida">`;
 	}
+	leitor.readAsDataURL(arquivo)
 }
