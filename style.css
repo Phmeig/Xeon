@@ -169,7 +169,7 @@ section{
 	grid-row: 1;
 }
 
-#autor{
+#npags{
 	grid-column: 1;
 	grid-row: 2;
 }
@@ -428,7 +428,7 @@ section{
 	grid-template-columns: repeat(2, 1fr);
 	grid-template-rows: auto;
 	grid-template-areas: 
-	"nomeLivro livrodeagora"
+	"nomeLivro btnleitura"
 	"nomelivro btnleitura";
 }
 
@@ -439,22 +439,6 @@ section{
 	align-items: flex-start;
 	width: 100%;
 	align-self: flex-start;
-}
-
-
-
-.capaLivro{
-	grid-area: livrodeagora;
-}
-
-.labelLivro{
-	font-size: 1.75rem;
-	cursor: pointer;
-}
-
-.promptLivro{
-	text-decoration: none;
-	display: none;
 }
 
 .labelLivro{
@@ -470,13 +454,14 @@ section{
 }
 
 .nombre{
-	margin-top: 5%;
+	font-family: Roboto;
 }
  
 .nomeLivro{
 	border: 1px solid #1F596E;
 	border-radius: 10px;
 	background-color: #D2D5D6;
+	margin-bottom: 5%;
 }
 
 #divbtnleitura{
@@ -484,6 +469,7 @@ section{
 	grid-area:btnleitura;
 	display:flex;
 	justify-content: center;
+	align-content: center;
 }
 
 #btnleitura{
@@ -491,8 +477,15 @@ section{
 	border-radius: 10px;
 	background-color:#098167;
 	width: 50%;
-	
+	color: whitesmoke;
 }
+
+#aviso{
+	color: rgb(231, 6, 6);
+	font-family: Roboto;
+	font-size: 1.2rem;
+}
+
 /*Registro: */
 
 #tituloregistro{

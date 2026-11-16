@@ -34,21 +34,13 @@
 				<div class="cardpLivros">
 					<div class="addlivro">
 						<h3 class="nombre">Qual o nome do seu livro?</h3>
-						<input type="text" placeholder="Digite o nome do seu livro..." class="nomeLivro">
+						<input type="text" placeholder="Digite o nome do seu livro..." class="nomeLivro" id="inputNome">
 						<h3 class="nombre" >Quantas páginas tem o livro?</h3>
-						<input type="number" placeholder="Digite o número de páginas..." class="nomeLivro">
-						<label for="promptLivro" class="labelLivro">
-							<p>Capa do livro</p>
-						</label>
-						<input id="promptLivro" class="promptLivro" type="file">
-
+						<input type="number" placeholder="Digite o número de páginas..." class="nomeLivro" id="inputPages">
 					</div>
-					<div class="capaLivro">
-						<!-- <img src="" alt="Livro Atual" class="capaEscolhida"> -->
-					</div>
-					<div id="divbtnleitura"><button id="btnleitura" onclick="capa()" >Iniciar Leitura</button></div>
+					<div id="divbtnleitura"><button id="btnleitura" onclick="iniciar()" >Iniciar Leitura</button></div>
+					<div id="aviso"></div>
 				</div>
-				
 			</article>	
 		</div>		
 			</div>
