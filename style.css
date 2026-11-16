@@ -160,21 +160,25 @@ section{
 
 #cardpcont{
 	display: grid;
-	grid-template-columns: 2fr 2fr 2fr;
-	grid-template-rows: 1fr 1fr 1fr 1fr;
+	/* grid-template-columns: 2fr 2fr 2fr;
+	grid-template-rows: 1fr 1fr 1fr 1fr; */
+	grid-template-columns: repeat(2,1fr);
+	grid-template-rows: auto;
+	grid-template-areas: 
+	"atual cardpimg"
+	"npags cardpimg"
+	"leitura cardpimg";
 }
 
 #atual{
-	grid-column: 1;
-	grid-row: 1;
+	grid-area: atual;
 }
 
 #npags{
-	grid-column: 1;
-	grid-row: 2;
+	grid-area:npags;
 }
 
-#img{
+#cardpimg{
 	height: 10px;
 }
 
@@ -184,12 +188,12 @@ section{
 }
 
 #leitura{
-	width:50%;
+	width:100%;
 	background-color:#569490;
 	border-radius: 10px;
 	font-size: 1rem;
-	grid-column: 1 / 3;
-	grid-row: 3 / -2;
+	grid-area: leitura;
+	margin-bottom: 5%;
 }
 		/*Card-fogo*/
 		
@@ -209,6 +213,13 @@ section{
 	border-radius: 20px;
 	margin-top: 10px;
 }
+
+.divImgs{
+	display:flex;
+	justify-content: center;
+}
+
+
 
 		/*Metas*/
 .metas{
