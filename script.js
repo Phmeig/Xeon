@@ -26,41 +26,79 @@ function efetuar(){
 
 // Tarefas
 
+let listaTarefas =JSON.parse(localStorage.getItem('tarefasXeon')) || [];
+renderizarTarefas()
+
+function salvarNoStorage(){
+	localStorage.setItem('tarefasXeon', JSON.stringify(listaTarefas));
+}
+
+function renderizarTarefas() {
+	let containerTarefas = document.querySelector('.tarefas');
+	containerTarefas.innerHTML = "";
+
+	listaTarefas.forEach((tarefa,index) => {
+		containerTarefas.innerHTML += `<div class="item-tarefa">
+ 				<h4 class="texto">${tarefa}</h4>
+ 				<button onclick="fracasso(${index})" class="btnfracasso">Descartar</button>
+ 				<button onclick="sucesso(${index})" class="btnsucesso">Concluída</button>
+ 			</div>`;
+	})
+}
+
 function adicionar() {
 	let inputNova = document.querySelector('.nova');
 	let textoDigitado = inputNova.value.trim();
-	let containerTarefas = document.querySelector('.tarefas');
 
 	if (textoDigitado !== "") {
-		containerTarefas.innerHTML += `
-			<div class="item-tarefa">
-				<h4 class="texto">${textoDigitado}</h4>
-				<button onclick="fracasso(this)" class="btnfracasso">Descartar</button>
-				<button onclick="sucesso(this)" class="btnsucesso">Concluída</button>
-			</div>`;
-		inputNova.value = "";
+		listaTarefas.push(textoDigitado);
+		salvarNoStorage();
+		renderizarTarefas()
 	}
 }
 
-function sucesso(botao) {
-	let divTarefa = botao.parentElement;
-	let txt = divTarefa.querySelector('.texto').textContent;
+function sucesso(index){
+	let txt = listaTarefas[index]
 	let campoMsg = document.querySelector('.campoMsg');
 
-	campoMsg.innerText = `Parabéns! Você concluiu sua tarefa: ${txt}!`;
-	divTarefa.remove();
+	campoMsg.innerHTML = `Parabéns! Você concluiu sua tarefa: ${txt}!`
+
+	listaTarefas.splice(index, 1);
+	salvarNoStorage();
+	renderizarTarefas()
 }
 
-function fracasso(botao) {
-	let divTarefa = botao.parentElement;
-	let txt = divTarefa.querySelector('.texto').textContent;
+function fracasso(index){
+	let txt = listaTarefas[index]
 	let campoMsg = document.querySelector('.campoMsg');
 
-	campoMsg.innerText = `Você descartou sua tarefa: ${txt}!`;
-	divTarefa.remove();
+	campoMsg.innerHTML = `Você excluiu sua tarefa: ${txt}!`
+
+	listaTarefas.splice(index, 1);
+	salvarNoStorage();
+	renderizarTarefas()
+
 }
 
-// Leitura
+// function sucesso(botao) {
+// 	let divTarefa = botao.parentElement;
+// 	let txt = divTarefa.querySelector('.texto').textContent;
+// 	let campoMsg = document.querySelector('.campoMsg');
+
+// 	campoMsg.innerText = `Parabéns! Você concluiu sua tarefa: ${txt}!`;
+// 	divTarefa.remove();
+// }
+
+// function fracasso(botao) {
+// 	let divTarefa = botao.parentElement;
+// 	let txt = divTarefa.querySelector('.texto').textContent;
+// 	let campoMsg = document.querySelector('.campoMsg');
+
+// 	campoMsg.innerText = `Você descartou sua tarefa: ${txt}!`;
+// 	divTarefa.remove();
+// }
+
+// // Leitura
 function livros() {
 	location.replace('livros.html')
 }

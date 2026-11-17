@@ -276,6 +276,7 @@ section{
 	border: 1px solid black;
 	margin-bottom: 2%;
 	width:75%;
+	color: whitesmoke;
 }
 
 #inputTarefas::placeholder{
