@@ -30,7 +30,9 @@
 		<section>
 			<article id="cardp"  class="bordacard"> <!--card -->
 				<div class="tarefasGrid">
-					<h2 id="centro" class="tituloP">Lista de Afazeres</h2>
+					<div id="centro">
+						<h2 id="centro" class="tituloP">Lista de Afazeres</h2>
+					</div>
 					<div class="tarefas">
 							<!-- <h4 id="texto"> Tarefa 1</h4>
 							<button onclick="fracasso()"id="btnfracasso">Fracasso</button>
@@ -38,8 +40,8 @@
 					</div>
 					<p class="campoMsg"></p>
 					<div id="prompt">
-						<h3>Adicione sua tarefa</h3>
-						<input class="inputregistro nova" type="text" placeholder="Digite sua tarefa..."> <button id="btntarefas" onclick="adicionar()">Adicionar</button>
+						<h3 id="add">Adicione sua tarefa</h3>
+						<input id="inputTarefas" class="nova" type="text" placeholder="Digite sua tarefa..."> <button id="btntarefas" onclick="adicionar()">Adicionar</button>
 					</div>
 				</div>	
 			</article>		

@@ -268,7 +268,19 @@ section{
 	"campo campo ";
 }
 
+#inputTarefas{
+	text-align: center;
+	font-family: 'Franklin Gothic Medium';
+	border-radius: 10px;
+	background-color: #35085e;
+	border: 1px solid black;
+	margin-bottom: 2%;
+	width:75%;
+}
 
+#inputTarefas::placeholder{
+		color: white;
+}
 
 .item-tarefa {
 	display: flex;
@@ -292,13 +304,22 @@ section{
 
 .tituloP{
 	grid-area: tituloP;
+	font-family: Roboto;
+	color:#20E6CF;
+}
+
+#add{
+	color:rgb(172, 117, 117);
+	font-family: 	sans-serif;
 }
 
 #btntarefas{
 	border: none;
-	background-color: #85218e;
+	background-color: #260f4e;
 	border-radius: 10px;
 	color: white;
+	width:50%;
+	font-family: Roboto;
 }
 
 
